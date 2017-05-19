@@ -165,6 +165,7 @@ def another_game():
 def play_quiz(string_original, string_key, mystery_list, lives):
     #return win or lose
     string_replaced = []
+    all_solutions_correct = 5
     solution_number = 0
     print string_original
     split_list = string_original.split()
@@ -175,7 +176,7 @@ def play_quiz(string_original, string_key, mystery_list, lives):
             if user_choice == True:
                 solution_number += 1
                 split_list = process_answer(split_list, word, string_key, solution_number)
-                if solution_number == 5:
+                if solution_number == all_solutions_correct:
                     return True
             else:
                 return False
